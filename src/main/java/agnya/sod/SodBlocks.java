@@ -6,7 +6,9 @@ import agnya.sod.blocks.SodBlock;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -52,7 +54,7 @@ public class SodBlocks  {
     // podzol sod block
     public static final SodBlock PODZOL_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
     // mycelium sod block
-    public static final SodBlock MYCELIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodBlock MYCELIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.MYCELIUM));
     // path sod block
     public static final SodBlock PATH_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
     // crimson nylium sod block
@@ -114,9 +116,12 @@ public class SodBlocks  {
 
         // TINTS
         // register colorprovider for block with grass tint
-
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x00FF00, GRASS_SOD_BLOCK);
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x00FF00, GRASS_SOD_SLAB);
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x00FF00, GRASS_SOD_PATCH);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_BLOCK);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_SLAB);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_PATCH);
+        // Register same color provider for block itemstacks
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x00FF00, GRASS_SOD_BLOCK);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x00FF00, GRASS_SOD_SLAB);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x00FF00, GRASS_SOD_PATCH);
     }
 }
