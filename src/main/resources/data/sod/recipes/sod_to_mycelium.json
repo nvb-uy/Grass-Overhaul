@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "sod:mycelium_sod_patch"
+    },
+    "1": {
+      "item": "sod:mycelium_sod_patch"
+    },
+    "2": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "minecraft:mycelium",
+    "count": 1
+  }
+}

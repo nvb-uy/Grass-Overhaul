@@ -1,31 +1,26 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "id": "sod",
+  "version": "22.07.15",
+  "name": "Sod",
+  "description": "Small mod that adds carpet-like grass sods and full grass block items, with all variations.",
   "authors": [
-    "Me!"
+    "AGNYA"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/sod",
+    "sources": ""
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "license": "Custom License | More info at CurseForge",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "agnya.sod.SodMod"
+    ],
+    "client": [
+      "agnya.sod.ClientInit"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
-
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
