@@ -10,21 +10,16 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import agnya.sod.SodBlocks.SodBlocks;
-
 public class SodMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("sod");
+
 	public static final ItemGroup tabsod = FabricItemGroupBuilder.create(
-		new Identifier("sod", "SodTab"))
+		new Identifier("sod", "tabsod"))
 		.icon(() -> new ItemStack(SodBlocks.GRASS_SOD_BLOCK))
 		.appendItems(stacks -> {
-			// MATERIAL ORDER:
-			// DIRT, GRASS, PATH, MYCELIUM, PODZOL, CRIMSON NYLIUM, WARPED NYLIUM.
-			// BLOCK ORDER:
-			// SOD_BLOCK, SOD_SLAB, SOD_PATCH
 			stacks.add(new ItemStack(Items.DIRT));
 			stacks.add(new ItemStack(SodBlocks.DIRT_SOD_SLAB));
 			stacks.add(new ItemStack(SodBlocks.DIRT_SOD_PATCH));
@@ -48,7 +43,6 @@ public class SodMod implements ModInitializer {
 			stacks.add(new ItemStack(SodBlocks.WARPED_NYLIUM_SOD_PATCH));
 		})
 		.build();
-
 
 	@Override
 	public void onInitialize() {
