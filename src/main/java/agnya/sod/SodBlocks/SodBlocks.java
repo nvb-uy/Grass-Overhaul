@@ -3,6 +3,7 @@ package agnya.sod.SodBlocks;
 import agnya.sod.blocks.SodPatch;
 import agnya.sod.blocks.SodSlab;
 import agnya.sod.blocks.SodBlock;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Material;
 import net.minecraft.util.Identifier;
@@ -81,5 +82,9 @@ public class SodBlocks  {
         Registry.register(Registry.BLOCK, new Identifier("sod", "path_sod_block"), PATH_SOD_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("sod", "crimson_nylium_sod_block"), CRIMSON_NYLIUM_SOD_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("sod", "warped_nylium_sod_block"), WARPED_NYLIUM_SOD_BLOCK);
+        
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x3495eb, GRASS_SOD_BLOCK);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x3495eb, GRASS_SOD_SLAB);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> 0x3495eb, GRASS_SOD_PATCH);
     }
 }

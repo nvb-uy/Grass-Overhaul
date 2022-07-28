@@ -1,6 +1,5 @@
 package agnya.sod;
 
-
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -18,7 +17,7 @@ public class SodMod implements ModInitializer {
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger("sod");
-	public static final ItemGroup SodTab = FabricItemGroupBuilder.create(
+	public static final ItemGroup tabsod = FabricItemGroupBuilder.create(
 		new Identifier("sod", "SodTab"))
 		.icon(() -> new ItemStack(SodBlocks.GRASS_SOD_BLOCK))
 		.appendItems(stacks -> {
