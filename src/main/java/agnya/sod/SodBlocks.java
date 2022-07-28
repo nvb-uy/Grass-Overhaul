@@ -120,8 +120,8 @@ public class SodBlocks  {
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_SLAB);
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_PATCH);
         // Register same color provider for block itemstacks
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x00FF00, GRASS_SOD_BLOCK);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x00FF00, GRASS_SOD_SLAB);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x00FF00, GRASS_SOD_PATCH);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x52784F, GRASS_SOD_BLOCK);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x52784F, GRASS_SOD_SLAB);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x52784F, GRASS_SOD_PATCH);
     }
 }
