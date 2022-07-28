@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.Material;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
@@ -17,50 +16,50 @@ import net.minecraft.util.registry.Registry;
 // DIRT, GRASS, PODZOL, MYCELIUM, PATH, CRIMSON NYLIUM, WARPED NYLIUM
 public class SodBlocks  {
     // PATCHES
-    public static final SodPatch DIRT_SOD_PATCH = new SodPatch(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodPatch DIRT_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.DIRT));
     // grass sod patch
-    public static final SodPatch GRASS_SOD_PATCH = new SodPatch(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodPatch GRASS_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // podzol sod patch
-    public static final SodPatch PODZOL_SOD_PATCH = new SodPatch(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodPatch PODZOL_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.PODZOL));
     // mycelium sod patch
-    public static final SodPatch MYCELIUM_SOD_PATCH = new SodPatch(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodPatch MYCELIUM_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.MYCELIUM));
     // path sod patch
-    public static final SodPatch PATH_SOD_PATCH = new SodPatch(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodPatch PATH_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // crimson nylium sod patch
-    public static final SodPatch CRIMSON_NYLIUM_SOD_PATCH = new SodPatch(FabricBlockSettings.of(Material.STONE).strength(1.5f));
+    public static final SodPatch CRIMSON_NYLIUM_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.CRIMSON_NYLIUM));
     // warped nylium sod patch
-    public static final SodPatch WARPED_NYLIUM_SOD_PATCH = new SodPatch(FabricBlockSettings.of(Material.STONE).strength(1.5f));
+    public static final SodPatch WARPED_NYLIUM_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
 
     // SLABS
     // dirt slab
-    public static final SodSlab DIRT_SOD_SLAB = new SodSlab(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodSlab DIRT_SOD_SLAB = new SodSlab(FabricBlockSettings.copyOf(Blocks.DIRT));
     // grass slab
-    public static final SodSlab GRASS_SOD_SLAB = new SodSlab(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodSlab GRASS_SOD_SLAB = new SodSlab(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // podzol slab
-    public static final SodSlab PODZOL_SOD_SLAB = new SodSlab(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodSlab PODZOL_SOD_SLAB = new SodSlab(FabricBlockSettings.copyOf(Blocks.PODZOL));
     // mycelium slab
-    public static final SodSlab MYCELIUM_SOD_SLAB = new SodSlab(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodSlab MYCELIUM_SOD_SLAB = new SodSlab(FabricBlockSettings.copyOf(Blocks.MYCELIUM));
     // path slab
-    public static final SodSlab PATH_SOD_SLAB = new SodSlab(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodSlab PATH_SOD_SLAB = new SodSlab(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // crimson nylium slab
-    public static final SodSlab CRIMSON_NYLIUM_SOD_SLAB = new SodSlab(FabricBlockSettings.of(Material.STONE).strength(1.5f));
+    public static final SodSlab CRIMSON_NYLIUM_SOD_SLAB = new SodSlab(FabricBlockSettings.copyOf(Blocks.CRIMSON_NYLIUM));
     // warped nylium slab
-    public static final SodSlab WARPED_NYLIUM_SOD_SLAB = new SodSlab(FabricBlockSettings.of(Material.STONE).strength(1.5f));
+    public static final SodSlab WARPED_NYLIUM_SOD_SLAB = new SodSlab(FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
 
     // BLOCKS
 
     // grass sod block
-    public static final SodBlock GRASS_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodBlock GRASS_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // podzol sod block
-    public static final SodBlock PODZOL_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodBlock PODZOL_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.PODZOL));
     // mycelium sod block
     public static final SodBlock MYCELIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.MYCELIUM));
     // path sod block
-    public static final SodBlock PATH_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.SOIL).strength(1.5f));
+    public static final SodBlock PATH_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // crimson nylium sod block
-    public static final SodBlock CRIMSON_NYLIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f));
+    public static final SodBlock CRIMSON_NYLIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_NYLIUM));
     // warped nylium sod block
-    public static final SodBlock WARPED_NYLIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f));
+    public static final SodBlock WARPED_NYLIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
 
     public static void init() {
         // PATCHES
