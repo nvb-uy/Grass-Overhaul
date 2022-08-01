@@ -112,15 +112,14 @@ public class SodBlocks  {
         Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_block"), new BlockItem(CRIMSON_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_block"), new BlockItem(WARPED_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
 
-
-        // TINTS
-        // register colorprovider for block with grass tint
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_BLOCK);
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_SLAB);
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getFoliageColor(view, pos), GRASS_SOD_PATCH);
+    }
+    public static void colorreg() {
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_BLOCK);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_SLAB);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_PATCH);
         // Register same color provider for block itemstacks
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x51944C, GRASS_SOD_BLOCK);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x51944C, GRASS_SOD_SLAB);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x51944C, GRASS_SOD_PATCH);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_BLOCK);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_SLAB);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_PATCH);
     }
 }

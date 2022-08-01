@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "sod",
-  "version": "22.07.28",
+  "version": "22.08.01",
   "name": "Sod",
   "description": "Small mod that adds carpet-like grass sods and full grass block items, with all variations.",
   "authors": [
@@ -18,7 +18,7 @@
       "agnya.sod.SodMod"
     ],
     "client": [
-      "agnya.sod.ClientInit"
+      "agnya.sod.ColorRegistry"
     ]
   },
   "depends": {
