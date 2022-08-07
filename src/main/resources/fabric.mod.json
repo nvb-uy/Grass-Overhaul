@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "sod",
-  "version": "22.07.28",
+  "version": "22.08.07-MC1.19.2",
   "name": "Sod",
   "description": "Small mod that adds carpet-like grass sods and full grass block items, with all variations.",
   "authors": [
@@ -24,7 +24,7 @@
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "1.19.1",
+    "minecraft": "~1.19",
     "java": ">=17"
   }
 }
