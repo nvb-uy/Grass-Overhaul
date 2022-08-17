@@ -1,7 +1,7 @@
 {   "parent": "block/thin_block",
     "textures": {
-        "particle": "block/grass_block",
-        "texture": "block/grass_block"
+        "particle": "block/grass_block_top",
+        "texture": "block/grass_block_top"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],
