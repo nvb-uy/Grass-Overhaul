@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "minecraft:block/warped_nylium"
+    "all": "minecraft:block/crimson_nylium"
   }
 }
