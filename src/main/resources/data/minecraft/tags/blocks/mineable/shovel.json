@@ -20,6 +20,13 @@
     "sod:crimson_nylium_sod_patch",
     "sod:warped_nylium_sod_block",
     "sod:warped_nylium_sod_slab",
-    "sod:warped_nylium_sod_patch"
+    "sod:warped_nylium_sod_patch",
+    "sod:dirt_sod_stairs",
+    "sod:grass_sod_stairs",
+    "sod:path_sod_stairs",
+    "sod:mycelium_sod_stairs",
+    "sod:podzol_sod_stairs",
+    "sod:crimson_nylium_sod_stairs",
+    "sod:warped_nylium_sod_stairs"
   ]
 }
