@@ -67,19 +67,19 @@ public class SodBlocks  {
     // STAIRS
     
     // dirt sod stairs
-    public static final SodStair DIRT_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.DIRT));
+    public static final SodStair DIRT_SOD_STAIRS = new SodStair(Blocks.DIRT.getDefaultState(), FabricBlockSettings.copyOf(Blocks.DIRT));
     // grass sod stairs
-    public static final SodStair GRASS_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
+    public static final SodStair GRASS_SOD_STAIRS = new SodStair(GRASS_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // podzol sod stairs
-    public static final SodStair PODZOL_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.PODZOL));
+    public static final SodStair PODZOL_SOD_STAIRS = new SodStair(PODZOL_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.PODZOL));
     // mycelium sod stairs
-    public static final SodStair MYCELIUM_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.MYCELIUM));
+    public static final SodStair MYCELIUM_SOD_STAIRS = new SodStair(MYCELIUM_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MYCELIUM));
     // path sod stairs
-    public static final SodStair PATH_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
+    public static final SodStair PATH_SOD_STAIRS = new SodStair(PATH_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
     // crimson nylium sod stairs
-    public static final SodStair CRIMSON_NYLIUM_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.CRIMSON_NYLIUM));
+    public static final SodStair CRIMSON_NYLIUM_SOD_STAIRS = new SodStair(CRIMSON_NYLIUM_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.CRIMSON_NYLIUM));
     // warped nylium sod stairs
-    public static final SodStair WARPED_NYLIUM_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
+    public static final SodStair WARPED_NYLIUM_SOD_STAIRS = new SodStair(WARPED_NYLIUM_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
 
 
     public static void init() {
@@ -138,14 +138,23 @@ public class SodBlocks  {
         Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_block"), new BlockItem(PATH_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_block"), new BlockItem(CRIMSON_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_block"), new BlockItem(WARPED_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
+        // STAIRS
+        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_stairs"), new BlockItem(GRASS_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_stairs"), new BlockItem(PODZOL_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_stairs"), new BlockItem(MYCELIUM_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_stairs"), new BlockItem(PATH_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_stairs"), new BlockItem(CRIMSON_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_stairs"), new BlockItem(WARPED_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
     }
     public static void colorreg() {
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_BLOCK);
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_SLAB);
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_PATCH);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_STAIRS);
         // Register same color provider for block itemstacks
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_BLOCK);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_SLAB);
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_PATCH);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_STAIRS);
     }
 }
