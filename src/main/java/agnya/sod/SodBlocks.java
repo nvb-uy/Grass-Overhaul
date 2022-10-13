@@ -8,7 +8,7 @@ import agnya.sod.blocks.SodBlock;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
@@ -67,19 +67,19 @@ public class SodBlocks  {
     // STAIRS
     
     // dirt sod stairs
-    public static final SodStair DIRT_SOD_STAIRS = new SodStair(Blocks.DIRT.getDefaultState(), FabricBlockSettings.copyOf(Blocks.DIRT));
+    public static final Block DIRT_SOD_STAIRS = new SodStair(Blocks.DIRT);
     // grass sod stairs
-    public static final SodStair GRASS_SOD_STAIRS = new SodStair(GRASS_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
+    public static final Block GRASS_SOD_STAIRS = new SodStair(GRASS_SOD_BLOCK);
     // podzol sod stairs
-    public static final SodStair PODZOL_SOD_STAIRS = new SodStair(PODZOL_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.PODZOL));
+    public static final Block PODZOL_SOD_STAIRS = new SodStair(PODZOL_SOD_BLOCK);
     // mycelium sod stairs
-    public static final SodStair MYCELIUM_SOD_STAIRS = new SodStair(MYCELIUM_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MYCELIUM));
+    public static final Block MYCELIUM_SOD_STAIRS = new SodStair(MYCELIUM_SOD_BLOCK);
     // path sod stairs
-    public static final SodStair PATH_SOD_STAIRS = new SodStair(PATH_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
+    public static final Block PATH_SOD_STAIRS = new SodStair(PATH_SOD_BLOCK);
     // crimson nylium sod stairs
-    public static final SodStair CRIMSON_NYLIUM_SOD_STAIRS = new SodStair(CRIMSON_NYLIUM_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.CRIMSON_NYLIUM));
+    public static final Block CRIMSON_NYLIUM_SOD_STAIRS = new SodStair(CRIMSON_NYLIUM_SOD_BLOCK);
     // warped nylium sod stairs
-    public static final SodStair WARPED_NYLIUM_SOD_STAIRS = new SodStair(WARPED_NYLIUM_SOD_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
+    public static final Block WARPED_NYLIUM_SOD_STAIRS = new SodStair(WARPED_NYLIUM_SOD_BLOCK);
 
 
     public static void init() {
@@ -107,6 +107,7 @@ public class SodBlocks  {
         Registry.register(Registry.BLOCK, new Identifier("sod", "crimson_nylium_sod_block"), CRIMSON_NYLIUM_SOD_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("sod", "warped_nylium_sod_block"), WARPED_NYLIUM_SOD_BLOCK);
         // STAIRS
+        Registry.register(Registry.BLOCK, new Identifier("sod", "dirt_sod_stairs"), DIRT_SOD_STAIRS);
         Registry.register(Registry.BLOCK, new Identifier("sod", "grass_sod_stairs"), GRASS_SOD_STAIRS);
         Registry.register(Registry.BLOCK, new Identifier("sod", "podzol_sod_stairs"), PODZOL_SOD_STAIRS);
         Registry.register(Registry.BLOCK, new Identifier("sod", "mycelium_sod_stairs"), MYCELIUM_SOD_STAIRS);
@@ -139,6 +140,7 @@ public class SodBlocks  {
         Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_block"), new BlockItem(CRIMSON_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_block"), new BlockItem(WARPED_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
         // STAIRS
+        Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_stairs"), new BlockItem(DIRT_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_stairs"), new BlockItem(GRASS_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_stairs"), new BlockItem(PODZOL_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_stairs"), new BlockItem(MYCELIUM_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
