@@ -22,24 +22,31 @@ public class SodMod implements ModInitializer {
 		.appendItems(stacks -> {
 			stacks.add(new ItemStack(Items.DIRT));
 			stacks.add(new ItemStack(SodBlocks.DIRT_SOD_SLAB));
+			stacks.add(new ItemStack(SodBlocks.DIRT_SOD_STAIRS));
 			stacks.add(new ItemStack(SodBlocks.DIRT_SOD_PATCH));
 			stacks.add(new ItemStack(SodBlocks.GRASS_SOD_BLOCK));
 			stacks.add(new ItemStack(SodBlocks.GRASS_SOD_SLAB));
+			stacks.add(new ItemStack(SodBlocks.GRASS_SOD_STAIRS));
 			stacks.add(new ItemStack(SodBlocks.GRASS_SOD_PATCH));
 			stacks.add(new ItemStack(SodBlocks.PATH_SOD_BLOCK));
 			stacks.add(new ItemStack(SodBlocks.PATH_SOD_SLAB));
+			stacks.add(new ItemStack(SodBlocks.PATH_SOD_STAIRS));
 			stacks.add(new ItemStack(SodBlocks.PATH_SOD_PATCH));
 			stacks.add(new ItemStack(SodBlocks.MYCELIUM_SOD_BLOCK));
 			stacks.add(new ItemStack(SodBlocks.MYCELIUM_SOD_SLAB));
+			stacks.add(new ItemStack(SodBlocks.MYCELIUM_SOD_STAIRS));
 			stacks.add(new ItemStack(SodBlocks.MYCELIUM_SOD_PATCH));
 			stacks.add(new ItemStack(SodBlocks.PODZOL_SOD_BLOCK));
 			stacks.add(new ItemStack(SodBlocks.PODZOL_SOD_SLAB));
+			stacks.add(new ItemStack(SodBlocks.PODZOL_SOD_STAIRS));
 			stacks.add(new ItemStack(SodBlocks.PODZOL_SOD_PATCH));
 			stacks.add(new ItemStack(SodBlocks.CRIMSON_NYLIUM_SOD_BLOCK));
 			stacks.add(new ItemStack(SodBlocks.CRIMSON_NYLIUM_SOD_SLAB));
+			stacks.add(new ItemStack(SodBlocks.CRIMSON_NYLIUM_SOD_STAIRS));
 			stacks.add(new ItemStack(SodBlocks.CRIMSON_NYLIUM_SOD_PATCH));
 			stacks.add(new ItemStack(SodBlocks.WARPED_NYLIUM_SOD_BLOCK));
 			stacks.add(new ItemStack(SodBlocks.WARPED_NYLIUM_SOD_SLAB));
+			stacks.add(new ItemStack(SodBlocks.WARPED_NYLIUM_SOD_STAIRS));
 			stacks.add(new ItemStack(SodBlocks.WARPED_NYLIUM_SOD_PATCH));
 		})
 		.build();
