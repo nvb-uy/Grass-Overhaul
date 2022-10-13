@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "sod",
-  "version": "22.08.17",
+  "version": "22.10.13",
   "name": "Sod",
-  "description": "Small mod that adds carpet-like grass sods and full grass block items, with all variations.",
+  "description": "Small mod that adds carpet-like grass sods and full grass blocks, with all variations.",
   "authors": [
     "AGNYA"
   ],
