@@ -20,5 +20,12 @@
   "block.sod.crimson_nylium_sod_patch": "Crimson Nylium Sod Patch",
   "block.sod.grass_sod_block": "Grass Sod Block",
   "block.sod.grass_sod_patch": "Grass Sod Patch",
-  "block.sod.crimson_nylium_sod_block": "Crimson Nylium Sod Block"
+  "block.sod.crimson_nylium_sod_block": "Crimson Nylium Sod Block",
+  "block.sod.dirt_sod_stairs": "Dirt Sod Stairs",
+  "block.sod.grass_sod_stairs": "Grass Sod Stairs",
+  "block.sod.mycelium_sod_stairs": "Mycelium Sod Stairs",
+  "block.sod.podzol_sod_stairs": "Podzol Sod Stairs",
+  "block.sod.path_sod_stairs": "Path Sod Stairs",
+  "block.sod.crimson_nylium_sod_stairs": "Crimson Nylium Sod Stairs",
+  "block.sod.warped_nylium_sod_stairs": "Warped Nylium Sod Stairs"
 }
