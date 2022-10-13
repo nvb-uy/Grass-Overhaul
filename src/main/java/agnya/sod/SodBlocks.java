@@ -2,10 +2,13 @@ package agnya.sod;
 
 import agnya.sod.blocks.SodPatch;
 import agnya.sod.blocks.SodSlab;
+import agnya.sod.blocks.SodStair;
 import agnya.sod.blocks.SodBlock;
+
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+
 import net.minecraft.block.Blocks;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.item.BlockItem;
@@ -61,6 +64,24 @@ public class SodBlocks  {
     // warped nylium sod block
     public static final SodBlock WARPED_NYLIUM_SOD_BLOCK = new SodBlock(FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
 
+    // STAIRS
+    
+    // dirt sod stairs
+    public static final SodStair DIRT_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.DIRT));
+    // grass sod stairs
+    public static final SodStair GRASS_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
+    // podzol sod stairs
+    public static final SodStair PODZOL_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.PODZOL));
+    // mycelium sod stairs
+    public static final SodStair MYCELIUM_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.MYCELIUM));
+    // path sod stairs
+    public static final SodStair PATH_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK));
+    // crimson nylium sod stairs
+    public static final SodStair CRIMSON_NYLIUM_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.CRIMSON_NYLIUM));
+    // warped nylium sod stairs
+    public static final SodStair WARPED_NYLIUM_SOD_STAIRS = new SodStair(null, FabricBlockSettings.copyOf(Blocks.WARPED_NYLIUM));
+
+
     public static void init() {
         // PATCHES
         Registry.register(Registry.BLOCK, new Identifier("sod", "dirt_sod_patch"), DIRT_SOD_PATCH);
@@ -85,7 +106,13 @@ public class SodBlocks  {
         Registry.register(Registry.BLOCK, new Identifier("sod", "path_sod_block"), PATH_SOD_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("sod", "crimson_nylium_sod_block"), CRIMSON_NYLIUM_SOD_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("sod", "warped_nylium_sod_block"), WARPED_NYLIUM_SOD_BLOCK);
-        
+        // STAIRS
+        Registry.register(Registry.BLOCK, new Identifier("sod", "grass_sod_stairs"), GRASS_SOD_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier("sod", "podzol_sod_stairs"), PODZOL_SOD_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier("sod", "mycelium_sod_stairs"), MYCELIUM_SOD_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier("sod", "path_sod_stairs"), PATH_SOD_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier("sod", "crimson_nylium_sod_stairs"), CRIMSON_NYLIUM_SOD_STAIRS);
+        Registry.register(Registry.BLOCK, new Identifier("sod", "warped_nylium_sod_stairs"), WARPED_NYLIUM_SOD_STAIRS);
 
         // BLOCK ITEMSTACKS
         // PATCHES
@@ -111,10 +138,6 @@ public class SodBlocks  {
         Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_block"), new BlockItem(PATH_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_block"), new BlockItem(CRIMSON_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_block"), new BlockItem(WARPED_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
-
-
-        // TINTS
-        // register colorprovider for block with grass tint
     }
     public static void colorreg() {
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_BLOCK);
