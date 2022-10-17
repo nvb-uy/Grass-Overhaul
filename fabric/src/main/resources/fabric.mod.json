@@ -9,7 +9,7 @@
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/sod",
-    "sources": "https://www.github.com/nvb-uy/sod-fabric"
+    "sources": "https://www.github.com/nvb-uy/sod"
   },
   "license": "MIT",
   "environment": "*",

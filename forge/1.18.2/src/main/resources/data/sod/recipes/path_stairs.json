@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#  ",
+        "## ",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "sod:path_sod_block"
+        }
+    },
+    "result": {
+        "item": "sod:path_sod_stairs",
+        "count": 6
+    }
+}
