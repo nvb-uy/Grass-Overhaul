@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.material.Material;
@@ -23,6 +24,8 @@ import agnya.sod.Sod;
 
 public class SodBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, Sod.MODID);
+
+	public static final RegistryObject<Block> DIRT_SOD_STAIRS = REGISTRY.register("dirt_sod_stairs", () -> new SodStairs(() -> Blocks.DIRT.defaultBlockState(), Properties.of(Material.DIRT).strength(0.6F)));
 	public static final RegistryObject<Block> DIRT_SOD_SLAB = REGISTRY.register("dirt_sod_slab", () -> new SodSlab(Properties.of(Material.DIRT).strength(0.6F)));
 	public static final RegistryObject<Block> DIRT_SOD_PATCH = REGISTRY.register("dirt_sod_patch", () -> new SodPatch(Properties.of(Material.DIRT).strength(0.6F)));
 	
