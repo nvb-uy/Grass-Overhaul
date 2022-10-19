@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sod:block/grass_sod_block"
+    }
+  }
+}

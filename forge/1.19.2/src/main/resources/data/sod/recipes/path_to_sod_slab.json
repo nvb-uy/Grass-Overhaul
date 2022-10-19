@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "sod:path_sod_block"
+    },
+    "1": {
+      "item": "sod:path_sod_block"
+    },
+    "2": {
+      "item": "sod:path_sod_block"
+    }
+  },
+  "result": {
+    "item": "sod:path_sod_slab",
+    "count": 6
+  }
+}
