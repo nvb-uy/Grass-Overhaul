@@ -72,6 +72,7 @@ public class SodBlocks {
 		@SubscribeEvent
 		public static void blockColorLoad(ColorHandlerEvent.Block event) {
 			TintableSodBlock.blockColorLoad(event);
+			TintableSodStairs.blockColorLoad(event);
 			TintableSodSlab.blockColorLoad(event);
 			TintableSodPatch.blockColorLoad(event);
 		}
@@ -79,6 +80,7 @@ public class SodBlocks {
 		@SubscribeEvent
 		public static void itemColorLoad(ColorHandlerEvent.Item event) {
 			TintableSodBlock.itemColorLoad(event);
+			TintableSodStairs.itemColorLoad(event);
 			TintableSodSlab.itemColorLoad(event);
 			TintableSodPatch.itemColorLoad(event);
 		}
