@@ -9,7 +9,7 @@ import agnya.sod.init.SodBlocks;
 import net.minecraft.client.renderer.BiomeColors;
 
 public class TintableSodSlab extends SodSlab {
-    TintableSodSlab(Properties p_49795_) {
+    public TintableSodSlab(Properties p_49795_) {
         super(p_49795_);
     }
 
