@@ -5,7 +5,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -70,7 +70,7 @@ public class SodBlocks {
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
 		@SubscribeEvent
-		public static void blockColorLoad(ColorHandlerEvent.Block event) {
+		public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
 			TintableSodBlock.blockColorLoad(event);
 			TintableSodStairs.blockColorLoad(event);
 			TintableSodSlab.blockColorLoad(event);
@@ -78,7 +78,7 @@ public class SodBlocks {
 		}
 
 		@SubscribeEvent
-		public static void itemColorLoad(ColorHandlerEvent.Item event) {
+		public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
 			TintableSodBlock.itemColorLoad(event);
 			TintableSodStairs.itemColorLoad(event);
 			TintableSodSlab.itemColorLoad(event);

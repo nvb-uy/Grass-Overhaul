@@ -1,6 +1,6 @@
 package agnya.sod.blocks;
 
-import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -14,14 +14,14 @@ public class TintableSodSlab extends SodSlab {
     }
 
 	@OnlyIn(Dist.CLIENT)
-	public static void blockColorLoad(ColorHandlerEvent.Block event) {
+	public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
 		event.getBlockColors().register((bs, world, pos, index) -> {
 			return world != null && pos != null ? BiomeColors.getAverageGrassColor(world, pos) : GrassColor.get(0.5D, 1.0D);
 		}, SodBlocks.GRASS_SOD_SLAB.get());
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public static void itemColorLoad(ColorHandlerEvent.Item event) {
+	public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
 		event.getItemColors().register((stack, index) -> {
 			return GrassColor.get(0.5D, 1.0D);
 		}, SodBlocks.GRASS_SOD_SLAB.get());
