@@ -25,9 +25,9 @@ import agnya.sod.Sod;
 public class SodBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, Sod.MODID);
 
-	public static final RegistryObject<Block> DIRT_SOD_STAIRS = REGISTRY.register("dirt_sod_stairs", () -> new SodStairs(() -> Blocks.DIRT.defaultBlockState(), Properties.of(Material.DIRT).strength(0.6F)));
-	public static final RegistryObject<Block> DIRT_SOD_SLAB = REGISTRY.register("dirt_sod_slab", () -> new SodSlab(Properties.of(Material.DIRT).strength(0.6F)));
-	public static final RegistryObject<Block> DIRT_SOD_PATCH = REGISTRY.register("dirt_sod_patch", () -> new SodPatch(Properties.of(Material.DIRT).strength(0.6F)));
+	public static final RegistryObject<Block> DIRT_SOD_STAIRS = REGISTRY.register("dirt_sod_stairs", () -> new SodStairs(() -> Blocks.DIRT.defaultBlockState(), Properties.of(Material.DIRT).strength(0.6F).sound(SoundType.GRAVEL)));
+	public static final RegistryObject<Block> DIRT_SOD_SLAB = REGISTRY.register("dirt_sod_slab", () -> new SodSlab(Properties.of(Material.DIRT).strength(0.6F).sound(SoundType.GRAVEL)));
+	public static final RegistryObject<Block> DIRT_SOD_PATCH = REGISTRY.register("dirt_sod_patch", () -> new SodPatch(Properties.of(Material.DIRT).strength(0.6F).sound(SoundType.GRAVEL)));
 	
 	public static final RegistryObject<Block> GRASS_SOD_BLOCK = REGISTRY.register("grass_sod_block", () -> new TintableSodBlock(Properties.of(Material.GRASS).strength(0.6F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> GRASS_SOD_STAIRS = REGISTRY.register("grass_sod_stairs", () -> new TintableSodStairs(() -> GRASS_SOD_BLOCK.get().defaultBlockState(), Properties.of(Material.GRASS).strength(0.6F).sound(SoundType.GRASS)));
@@ -72,6 +72,7 @@ public class SodBlocks {
 		@SubscribeEvent
 		public static void blockColorLoad(ColorHandlerEvent.Block event) {
 			TintableSodBlock.blockColorLoad(event);
+			TintableSodStairs.blockColorLoad(event);
 			TintableSodSlab.blockColorLoad(event);
 			TintableSodPatch.blockColorLoad(event);
 		}
@@ -79,6 +80,7 @@ public class SodBlocks {
 		@SubscribeEvent
 		public static void itemColorLoad(ColorHandlerEvent.Item event) {
 			TintableSodBlock.itemColorLoad(event);
+			TintableSodStairs.itemColorLoad(event);
 			TintableSodSlab.itemColorLoad(event);
 			TintableSodPatch.itemColorLoad(event);
 		}
