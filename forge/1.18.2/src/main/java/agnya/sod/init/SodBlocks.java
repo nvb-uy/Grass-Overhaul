@@ -53,26 +53,6 @@ public class SodBlocks {
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
-/*
-		@SubscribeEvent
-		public static void clientSetup(FMLClientSetupEvent event) {
-			// Register render types for all slabs and patches (dirt, grass, path, mycelium, podzol, crimson nylium, warped nylium)
-			ItemBlockRenderTypes.setRenderLayer(DIRT_SOD_SLAB.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(DIRT_SOD_PATCH.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(GRASS_SOD_SLAB.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(GRASS_SOD_PATCH.get(), renderType -> renderType == RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(PATH_SOD_SLAB.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(PATH_SOD_PATCH.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(MYCELIUM_SOD_SLAB.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(MYCELIUM_SOD_PATCH.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(PODZOL_SOD_SLAB.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(PODZOL_SOD_PATCH.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(CRIMSON_NYLIUM_SOD_SLAB.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(CRIMSON_NYLIUM_SOD_PATCH.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(WARPED_NYLIUM_SOD_SLAB.get(), RenderType.cutout());
-			ItemBlockRenderTypes.setRenderLayer(WARPED_NYLIUM_SOD_PATCH.get(), RenderType.cutout());
-		}*/
-
 		@SubscribeEvent
 		public static void blockColorLoad(ColorHandlerEvent.Block event) {
 			TintableSodBlock.blockColorLoad(event);
