@@ -15,9 +15,14 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-// materials to do patches, slabs and blocks:
-// DIRT, GRASS, PODZOL, MYCELIUM, PATH, CRIMSON NYLIUM, WARPED NYLIUM
-public class SodBlocks  {
+
+public class GOBlocks  {
+    // Non-Sod Blocks
+    // GRASS
+    public static final SodSlab GRASS_SLAB = new SodSlab(FabricBlockSettings.copy(Blocks.GRASS_BLOCK));
+    
+
+    // Sod Blocks
     // PATCHES
     public static final SodPatch DIRT_SOD_PATCH = new SodPatch(FabricBlockSettings.copyOf(Blocks.DIRT));
     // grass sod patch
@@ -83,6 +88,11 @@ public class SodBlocks  {
 
 
     public static void init() {
+        // Non-Sod Blocks
+        // GRASS
+        Registry.register(Registry.BLOCK, new Identifier("sod", "grass_slab"), GRASS_SLAB);
+        
+        // SOD BLOCKS
         // PATCHES
         Registry.register(Registry.BLOCK, new Identifier("sod", "dirt_sod_patch"), DIRT_SOD_PATCH);
         Registry.register(Registry.BLOCK, new Identifier("sod", "grass_sod_patch"), GRASS_SOD_PATCH);
@@ -117,46 +127,43 @@ public class SodBlocks  {
 
         // BLOCK ITEMSTACKS
         // PATCHES
-        Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_patch"), new BlockItem(DIRT_SOD_PATCH, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_patch"), new BlockItem(GRASS_SOD_PATCH, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_patch"), new BlockItem(PODZOL_SOD_PATCH, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_patch"), new BlockItem(MYCELIUM_SOD_PATCH, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_patch"), new BlockItem(PATH_SOD_PATCH, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_patch"), new BlockItem(CRIMSON_NYLIUM_SOD_PATCH, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_patch"), new BlockItem(WARPED_NYLIUM_SOD_PATCH, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_patch"), new BlockItem(DIRT_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_patch"), new BlockItem(GRASS_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_patch"), new BlockItem(PODZOL_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_patch"), new BlockItem(MYCELIUM_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_patch"), new BlockItem(PATH_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_patch"), new BlockItem(CRIMSON_NYLIUM_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_patch"), new BlockItem(WARPED_NYLIUM_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
         // SLABS
-        Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_slab"), new BlockItem(DIRT_SOD_SLAB, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_slab"), new BlockItem(GRASS_SOD_SLAB, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_slab"), new BlockItem(PODZOL_SOD_SLAB, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_slab"), new BlockItem(MYCELIUM_SOD_SLAB, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_slab"), new BlockItem(PATH_SOD_SLAB, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_slab"), new BlockItem(CRIMSON_NYLIUM_SOD_SLAB, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_slab"), new BlockItem(WARPED_NYLIUM_SOD_SLAB, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_slab"), new BlockItem(DIRT_SOD_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_slab"), new BlockItem(GRASS_SOD_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_slab"), new BlockItem(PODZOL_SOD_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_slab"), new BlockItem(MYCELIUM_SOD_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_slab"), new BlockItem(PATH_SOD_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_slab"), new BlockItem(CRIMSON_NYLIUM_SOD_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_slab"), new BlockItem(WARPED_NYLIUM_SOD_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
         // BLOCKS
-        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_block"), new BlockItem(GRASS_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_block"), new BlockItem(PODZOL_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_block"), new BlockItem(MYCELIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_block"), new BlockItem(PATH_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_block"), new BlockItem(CRIMSON_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_block"), new BlockItem(WARPED_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_block"), new BlockItem(GRASS_SOD_BLOCK, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_block"), new BlockItem(PODZOL_SOD_BLOCK, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_block"), new BlockItem(MYCELIUM_SOD_BLOCK, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_block"), new BlockItem(PATH_SOD_BLOCK, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_block"), new BlockItem(CRIMSON_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_block"), new BlockItem(WARPED_NYLIUM_SOD_BLOCK, new FabricItemSettings().group(GrassOverhaul.tabsod)));
         // STAIRS
-        Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_stairs"), new BlockItem(DIRT_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_stairs"), new BlockItem(GRASS_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_stairs"), new BlockItem(PODZOL_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_stairs"), new BlockItem(MYCELIUM_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_stairs"), new BlockItem(PATH_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_stairs"), new BlockItem(CRIMSON_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
-        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_stairs"), new BlockItem(WARPED_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(SodMod.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_stairs"), new BlockItem(DIRT_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_stairs"), new BlockItem(GRASS_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "podzol_sod_stairs"), new BlockItem(PODZOL_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "mycelium_sod_stairs"), new BlockItem(MYCELIUM_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "path_sod_stairs"), new BlockItem(PATH_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "crimson_nylium_sod_stairs"), new BlockItem(CRIMSON_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+        Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_stairs"), new BlockItem(WARPED_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
     }
     public static void colorreg() {
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_BLOCK);
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_SLAB);
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_PATCH);
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), GRASS_SOD_STAIRS);
-        // Register same color provider for block itemstacks
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_BLOCK);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_SLAB);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_PATCH);
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, GRASS_SOD_STAIRS);
+        Block TintedBlocks[] = {GRASS_SOD_BLOCK, GRASS_SOD_SLAB, GRASS_SOD_PATCH, GRASS_SOD_STAIRS};
+        
+        for (int i = 0; i < TintedBlocks.length; i++) {
+            ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), TintedBlocks[i]);
+            ColorProviderRegistry.ITEM.register((stack, tintIndex) -> 0x72b06a, TintedBlocks[i]);
+        }
     }
 }
