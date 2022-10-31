@@ -126,6 +126,13 @@ public class GOBlocks  {
         Registry.register(Registry.BLOCK, new Identifier("sod", "warped_nylium_sod_stairs"), WARPED_NYLIUM_SOD_STAIRS);
 
         // BLOCK ITEMSTACKS
+        // Non-Sod Blocks
+        // GRASS
+        Registry.register(Registry.ITEM, new Identifier("sod", "grass_slab"), new BlockItem(GRASS_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
+
+
+
+        // Sod Blocks
         // PATCHES
         Registry.register(Registry.ITEM, new Identifier("sod", "dirt_sod_patch"), new BlockItem(DIRT_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
         Registry.register(Registry.ITEM, new Identifier("sod", "grass_sod_patch"), new BlockItem(GRASS_SOD_PATCH, new FabricItemSettings().group(GrassOverhaul.tabsod)));
@@ -159,7 +166,7 @@ public class GOBlocks  {
         Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_stairs"), new BlockItem(WARPED_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
     }
     public static void colorreg() {
-        Block TintedBlocks[] = {GRASS_SOD_BLOCK, GRASS_SOD_SLAB, GRASS_SOD_PATCH, GRASS_SOD_STAIRS};
+        Block TintedBlocks[] = {GRASS_SLAB, GRASS_SOD_BLOCK, GRASS_SOD_SLAB, GRASS_SOD_PATCH, GRASS_SOD_STAIRS};
         
         for (int i = 0; i < TintedBlocks.length; i++) {
             ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), TintedBlocks[i]);
