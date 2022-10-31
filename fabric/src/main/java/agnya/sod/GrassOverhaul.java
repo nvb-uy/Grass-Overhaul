@@ -20,9 +20,11 @@ public class GrassOverhaul implements ModInitializer {
 		new Identifier("sod", "tabsod"))
 		.icon(() -> new ItemStack(GOBlocks.GRASS_SOD_BLOCK))
 		.appendItems(stacks -> {
+			/*
 			stacks.add(new ItemStack(Items.GRASS_BLOCK));
 			stacks.add(new ItemStack(GOBlocks.GRASS_SLAB));
-
+			*/
+			
 			// Sod Blocks
 
 			stacks.add(new ItemStack(Items.DIRT));

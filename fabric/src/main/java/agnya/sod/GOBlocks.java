@@ -17,9 +17,9 @@ import net.minecraft.util.registry.Registry;
 
 
 public class GOBlocks  {
-    // Non-Sod Blocks
+    // Non-Sod Blocks (TODO: Implement them later)
     // GRASS
-    public static final SodSlab GRASS_SLAB = new SodSlab(FabricBlockSettings.copy(Blocks.GRASS_BLOCK));
+    // public static final SodSlab GRASS_SLAB = new SodSlab(FabricBlockSettings.copy(Blocks.GRASS_BLOCK));
     
 
     // Sod Blocks
@@ -90,8 +90,10 @@ public class GOBlocks  {
     public static void init() {
         // Non-Sod Blocks
         // GRASS
+        /* 
         Registry.register(Registry.BLOCK, new Identifier("sod", "grass_slab"), GRASS_SLAB);
-        
+        */
+
         // SOD BLOCKS
         // PATCHES
         Registry.register(Registry.BLOCK, new Identifier("sod", "dirt_sod_patch"), DIRT_SOD_PATCH);
@@ -126,10 +128,11 @@ public class GOBlocks  {
         Registry.register(Registry.BLOCK, new Identifier("sod", "warped_nylium_sod_stairs"), WARPED_NYLIUM_SOD_STAIRS);
 
         // BLOCK ITEMSTACKS
-        // Non-Sod Blocks
+        // Non-Sod Blocks (TODO: Implement them later)
         // GRASS
+        /*
         Registry.register(Registry.ITEM, new Identifier("sod", "grass_slab"), new BlockItem(GRASS_SLAB, new FabricItemSettings().group(GrassOverhaul.tabsod)));
-
+        */
 
 
         // Sod Blocks
@@ -166,7 +169,7 @@ public class GOBlocks  {
         Registry.register(Registry.ITEM, new Identifier("sod", "warped_nylium_sod_stairs"), new BlockItem(WARPED_NYLIUM_SOD_STAIRS, new FabricItemSettings().group(GrassOverhaul.tabsod)));
     }
     public static void colorreg() {
-        Block TintedBlocks[] = {GRASS_SLAB, GRASS_SOD_BLOCK, GRASS_SOD_SLAB, GRASS_SOD_PATCH, GRASS_SOD_STAIRS};
+        Block TintedBlocks[] = {GRASS_SOD_BLOCK, GRASS_SOD_SLAB, GRASS_SOD_PATCH, GRASS_SOD_STAIRS};
         
         for (int i = 0; i < TintedBlocks.length; i++) {
             ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> BiomeColors.getGrassColor(view, pos), TintedBlocks[i]);
