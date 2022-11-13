@@ -16,9 +16,9 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '22.10.19'
-group = 'agnya.sod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'grassoverhaul'
+version = '22.11.13'
+group = 'elocindev.grassoverhaul' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'GrassOverhaul-Forge_1.18.2'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)

@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
   "id": "sod",
-  "version": "22.10.26",
+  "version": "22.11.13",
   "name": "Grass Overhaul",
   "description": "Adds stackable carpet-like sods, slabs, stairs and full blocks, for all grass variations.",
   "authors": [
-    "AGNYA"
+    "ElocinDev", "AGNYA"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/grass-overhaul",
     "sources": "https://www.github.com/nvb-uy/grass-overhaul"
   },
-  "license": "MIT",
+  "license": "AGNYA License",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "agnya.sod.GrassOverhaul"
+      "elocindev.grassoverhaul.GrassOverhaul"
     ],
     "client": [
-      "agnya.sod.ClientInit"
+      "elocindev.grassoverhaul.ClientInit"
     ]
   },
   "depends": {
