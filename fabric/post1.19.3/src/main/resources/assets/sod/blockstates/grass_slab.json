@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "sod:custom/grass_slab"
+    },
+    "type=top": {
+      "model": "sod:custom/grass_slab_top"
+    },
+    "type=double": {
+      "model": "minecraft:block/grass_block"
+    }
+  }
+}

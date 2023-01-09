@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "sod:block/path_sod_block"
+    }
+  }
+}
