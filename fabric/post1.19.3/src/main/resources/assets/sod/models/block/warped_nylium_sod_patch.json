@@ -1,8 +1,0 @@
-{
-  "parent": "sod:custom/sodblock",
-  "textures": {
-    "all": "minecraft:block/warped_nylium",
-    "particle": "minecraft:block/warped_nylium",
-    "0": "minecraft:block/warped_nylium"
-  }
-}

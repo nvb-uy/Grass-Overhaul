@@ -1,8 +1,0 @@
-{
-  "parent": "sod:custom/sodblock",
-  "textures": {
-    "all": "minecraft:block/grass_block_top",
-    "particle": "minecraft:block/grass_block_top",
-    "0": "minecraft:block/grass_block_top"
-  }
-}
