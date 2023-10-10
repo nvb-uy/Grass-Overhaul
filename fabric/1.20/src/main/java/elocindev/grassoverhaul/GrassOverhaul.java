@@ -2,8 +2,10 @@ package elocindev.grassoverhaul;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +18,7 @@ public class GrassOverhaul implements ModInitializer {
 	public void onInitialize() {
 		GOBlocks.init();
 		
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
+		ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier("natural_blocks"))).register(content -> {
 			content.addAfter(Items.GRASS_BLOCK, GOBlocks.GRASS_SOD_BLOCK);
 			content.addAfter(GOBlocks.GRASS_SOD_BLOCK, GOBlocks.GRASS_SOD_STAIRS);
 			content.addAfter(GOBlocks.GRASS_SOD_STAIRS, GOBlocks.GRASS_SOD_SLAB);
