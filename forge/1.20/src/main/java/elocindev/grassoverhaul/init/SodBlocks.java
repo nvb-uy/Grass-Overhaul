@@ -28,10 +28,10 @@ public class SodBlocks {
 	public static final RegistryObject<Block> DIRT_SOD_SLAB = REGISTRY.register("dirt_sod_slab", () -> new SodSlab(Properties.copy(Blocks.DIRT).strength(0.6F)));
 	public static final RegistryObject<Block> DIRT_SOD_PATCH = REGISTRY.register("dirt_sod_patch", () -> new SodPatch(Properties.copy(Blocks.DIRT).strength(0.6F).dynamicShape()));
 	
-	public static final RegistryObject<Block> GRASS_SOD_BLOCK = REGISTRY.register("grass_sod_block", () -> new TintableSodBlock(Properties.copy(Blocks.GRASS).strength(0.6F).sound(SoundType.GRASS)));
-	public static final RegistryObject<Block> GRASS_SOD_STAIRS = REGISTRY.register("grass_sod_stairs", () -> new TintableSodStairs(() -> GRASS_SOD_BLOCK.get().defaultBlockState(), Properties.copy(Blocks.GRASS).strength(0.6F).sound(SoundType.GRASS)));
-	public static final RegistryObject<Block> GRASS_SOD_SLAB = REGISTRY.register("grass_sod_slab", () -> new TintableSodSlab(Properties.copy(Blocks.GRASS).strength(0.6F).sound(SoundType.GRASS)));
-	public static final RegistryObject<Block> GRASS_SOD_PATCH = REGISTRY.register("grass_sod_patch", () -> new TintableSodPatch(Properties.copy(Blocks.GRASS).strength(0.6F).sound(SoundType.GRASS).dynamicShape()));
+	public static final RegistryObject<Block> GRASS_SOD_BLOCK = REGISTRY.register("grass_sod_block", () -> new TintableSodBlock(Properties.copy(Blocks.GRASS_BLOCK).strength(0.6F).sound(SoundType.GRASS)));
+	public static final RegistryObject<Block> GRASS_SOD_STAIRS = REGISTRY.register("grass_sod_stairs", () -> new TintableSodStairs(() -> GRASS_SOD_BLOCK.get().defaultBlockState(), Properties.copy(Blocks.GRASS_BLOCK).strength(0.6F).sound(SoundType.GRASS)));
+	public static final RegistryObject<Block> GRASS_SOD_SLAB = REGISTRY.register("grass_sod_slab", () -> new TintableSodSlab(Properties.copy(Blocks.GRASS_BLOCK).strength(0.6F).sound(SoundType.GRASS)));
+	public static final RegistryObject<Block> GRASS_SOD_PATCH = REGISTRY.register("grass_sod_patch", () -> new TintableSodPatch(Properties.copy(Blocks.GRASS_BLOCK).strength(0.6F).sound(SoundType.GRASS).dynamicShape()));
 	
 	public static final RegistryObject<Block> PATH_SOD_BLOCK = REGISTRY.register("path_sod_block", () -> new SodBlock(Properties.copy(Blocks.DIRT_PATH).strength(0.6F).sound(SoundType.GRASS)));
 	public static final RegistryObject<Block> PATH_SOD_STAIRS = REGISTRY.register("path_sod_stairs", () -> new SodStairs(() -> PATH_SOD_BLOCK.get().defaultBlockState(), Properties.copy(Blocks.DIRT_PATH).strength(0.6F).sound(SoundType.GRASS)));

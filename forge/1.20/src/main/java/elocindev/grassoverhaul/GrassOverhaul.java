@@ -1,5 +1,6 @@
 package elocindev.grassoverhaul;
 
+import elocindev.grassoverhaul.init.ItemGroup;
 import elocindev.grassoverhaul.init.SodBlocks;
 import elocindev.grassoverhaul.init.SodItems;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,6 +20,7 @@ public class GrassOverhaul
 
         SodBlocks.REGISTRY.register(bus);
 		SodItems.REGISTRY.register(bus);
+        ItemGroup.REGISTRY.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
 
     }
